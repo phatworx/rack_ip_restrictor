@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = ["Alexander Dreher"]
   s.date = %q{2011-04-11}
   s.description = %q{Restricts requests to specific IP addresses and ranges for specified paths}
-  s.email = %q{alexdreher@lxmedia.net}
+  s.email = %q{team@phatworx.de}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -20,22 +20,25 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
     "init.rb",
     "lib/rack_ip_restrictor.rb",
+    "rack_ip_restrictor.gemspec",
     "spec/rack_ip_restrictor_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{https://github.com/phatworx/rack_ip_restrictor}
+  s.homepage = %q{http://github.com/phatworx/rack_ip_restrictor}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.2}
   s.summary = %q{IP restriction middleware}
   s.test_files = [
     "spec/rack_ip_restrictor_spec.rb",
+    "spec/rule_set_spec.rb",
     "spec/spec_helper.rb"
   ]
 
@@ -43,12 +46,14 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<activesupport>, [">= 2.3.5"])
       s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_development_dependency(%q<yard>, ["~> 0.6.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
     else
+      s.add_dependency(%q<activesupport>, [">= 2.3.5"])
       s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<yard>, ["~> 0.6.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -56,6 +61,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rcov>, [">= 0"])
     end
   else
+    s.add_dependency(%q<activesupport>, [">= 2.3.5"])
     s.add_dependency(%q<rspec>, ["~> 2.3.0"])
     s.add_dependency(%q<yard>, ["~> 0.6.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
