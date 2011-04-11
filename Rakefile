@@ -13,11 +13,11 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "rack_ip_restrictor"
-  gem.homepage = "https://github.com/phatworx/rack_ip_restrictor"
+  gem.homepage = "http://github.com/phatworx/rack_ip_restrictor"
   gem.license = "MIT"
   gem.summary = %Q{IP restriction middleware}
   gem.description = %Q{Restricts requests to specific IP addresses and ranges for specified paths}
-  gem.email = "alexdreher@lxmedia.net"
+  gem.email = "team@phatworx.de"
   gem.authors = ["Alexander Dreher"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
@@ -30,11 +30,6 @@ require 'rspec/core'
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
-end
-
-RSpec::Core::RakeTask.new(:rcov) do |spec|
-  spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
 end
 
 task :default => :spec
