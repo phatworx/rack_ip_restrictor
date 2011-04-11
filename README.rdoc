@@ -1,6 +1,26 @@
 = rack_ip_restrictor
 
-Description goes here.
+Restricts requests to specific IP addresses and ranges for specified paths.
+
+== Installation
+Add the following line to your Gemfile
+  gem "rack_ip_restrictor"
+
+If you want to use it as plugin
+  rails plugin install git://github.com/phatworx/rack_ip_restrictor.git
+
+== Using
+TODO
+
+== Features
+TODO
+
+== Maintainers
+
+* Team Phatworx (http://github.com/phatworx)
+* Alexander Dreher (http://github.com/alexdreher)
+* Marco Scholl (http://github.com/traxanos)
+
 
 == Contributing to rack_ip_restrictor
  
@@ -14,6 +34,5 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 Alexander Dreher. See LICENSE.txt for
-further details.
+Copyright (c) 2011 Alexander Dreher. See LICENSE.txt for further details.
 
