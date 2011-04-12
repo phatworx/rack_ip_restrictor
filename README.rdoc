@@ -10,7 +10,31 @@ If you want to use it as plugin
   rails plugin install git://github.com/phatworx/rack_ip_restrictor.git
 
 == Using
-TODO
+=== Rails 3
+Create an initializer file in +config/initializers+, e.g. +config/initializers/rack_ip_restrictor.rb+ with your configuration. See the documentation for details.
+
+  Rack::IpRestrictor.configure do
+    respond_with [403, {'Content-Type' => 'text/html'}, '']
+
+    ips_for :test do
+      add '127.0.0.1'
+      add '127.0.0.2/8'
+    end
+
+    restrict /^\/admin/, '/admin', :only => :test
+  end
+
+Add the configured middleware in the +config/application.rb+
+
+  # [...]
+    class Application < Rails::Application
+      # [...]
+      config.middleware.use Rack::IpRestrictor.middleware
+      # [...]
+    end
+  # [...]
+
+Start/restart your rails server and see it working.
 
 == Features
 TODO

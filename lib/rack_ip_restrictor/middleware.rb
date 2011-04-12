@@ -1,3 +1,4 @@
+# Rack middleware
 class Rack::IpRestrictor::Middleware
 
   def initialize(app, options={})
@@ -5,6 +6,7 @@ class Rack::IpRestrictor::Middleware
     @options = options
   end
 
+  # Rack middleware call method
   def call(env)
     remote_addr = IPAddr.new(env['REMOTE_ADDR'])
 
@@ -15,6 +17,8 @@ class Rack::IpRestrictor::Middleware
     @app.call(env)
   end
 
+  private
+  # @return [Array] The response array [Status, set of headers, body]
   def access_denied
     Rack::IpRestrictor.config.response
   end

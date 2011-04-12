@@ -1,19 +1,21 @@
 require 'ipaddr'
 require 'active_support/core_ext/array/extract_options'
 
-# namespace rack
+# namespace Rack
 module Rack
+  # namespace IpRestrictor
   module IpRestrictor
     class << self
+      attr_reader :config
+
+      # @see Config#initialize
       def configure(&block)
         @config = IpRestrictor::Config.new
         @config.instance_eval &block
       end
 
-      def config
-        @config
-      end
-
+      # Rack middleware
+      # @return [Middleware] The configured plug & play Rack middleware
       def middleware
         IpRestrictor::Middleware
       end
