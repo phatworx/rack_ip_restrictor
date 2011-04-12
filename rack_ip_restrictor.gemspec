@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Alexander Dreher"]
-  s.date = %q{2011-04-11}
+  s.date = %q{2011-04-12}
   s.description = %q{Restricts requests to specific IP addresses and ranges for specified paths}
   s.email = %q{team@phatworx.de}
   s.extra_rdoc_files = [
@@ -27,8 +27,15 @@ Gem::Specification.new do |s|
     "VERSION",
     "init.rb",
     "lib/rack_ip_restrictor.rb",
+    "lib/rack_ip_restrictor/_internal_ip_restrictor.rb",
+    "lib/rack_ip_restrictor/config.rb",
+    "lib/rack_ip_restrictor/ip_group.rb",
+    "lib/rack_ip_restrictor/middleware.rb",
+    "lib/rack_ip_restrictor/restriction.rb",
+    "lib/rack_ip_restrictor/rule_set.rb",
     "rack_ip_restrictor.gemspec",
     "spec/rack_ip_restrictor_spec.rb",
+    "spec/rule_set_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/phatworx/rack_ip_restrictor}

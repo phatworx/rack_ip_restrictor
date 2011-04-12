@@ -22,7 +22,7 @@ module Rack
 end
 
 require 'rack_ip_restrictor/ip_group'
-require 'rack_ip_restrictor/rule_set'
 require 'rack_ip_restrictor/middleware'
 require 'rack_ip_restrictor/config'
+require 'rack_ip_restrictor/restriction'
 

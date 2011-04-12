@@ -13,7 +13,7 @@ class Rack::IpRestrictor::Middleware
   def call(env)
     remote_addr = IPAddr.new(env['REMOTE_ADDR'])
 
-    Rack::IpRestrictor.restrictions.each do |restriction|
+    Rack::IpRestrictor.config.restrictions.each do |restriction|
       return access_denied unless restriction.validate(env, remote_addr)
     end
 
