@@ -32,7 +32,6 @@ Gem::Specification.new do |s|
     "lib/rack_ip_restrictor/ip_group.rb",
     "lib/rack_ip_restrictor/middleware.rb",
     "lib/rack_ip_restrictor/restriction.rb",
-    "lib/rack_ip_restrictor/rule_set.rb",
     "rack_ip_restrictor.gemspec",
     "spec/rack_ip_restrictor_spec.rb",
     "spec/rule_set_spec.rb",
