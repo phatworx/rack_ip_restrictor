@@ -27,7 +27,6 @@ Gem::Specification.new do |s|
     "VERSION",
     "init.rb",
     "lib/rack_ip_restrictor.rb",
-    "lib/rack_ip_restrictor/_internal_ip_restrictor.rb",
     "lib/rack_ip_restrictor/config.rb",
     "lib/rack_ip_restrictor/ip_group.rb",
     "lib/rack_ip_restrictor/middleware.rb",
@@ -57,14 +56,12 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<yard>, ["~> 0.6.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
-      s.add_development_dependency(%q<rcov>, [">= 0"])
     else
       s.add_dependency(%q<activesupport>, [">= 2.3.5"])
       s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<yard>, ["~> 0.6.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
-      s.add_dependency(%q<rcov>, [">= 0"])
     end
   else
     s.add_dependency(%q<activesupport>, [">= 2.3.5"])
@@ -72,7 +69,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<yard>, ["~> 0.6.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
-    s.add_dependency(%q<rcov>, [">= 0"])
   end
 end
 
