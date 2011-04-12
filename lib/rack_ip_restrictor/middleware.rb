@@ -3,11 +3,6 @@ class Rack::IpRestrictor::Middleware
   def initialize(app, options={})
     @app = app
     @options = options
-#        @response = [
-#          404,
-#          {'Content-Type' => (options[:content_type] || 'text/html')},
-#          [options[:message] || DEFAULT_MESSAGE]
-#        ]
   end
 
   def call(env)
