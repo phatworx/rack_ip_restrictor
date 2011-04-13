@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.summary = %Q{IP restriction middleware}
   gem.description = %Q{Restricts requests to specific IP addresses and ranges for specified paths}
   gem.email = "team@phatworx.de"
-  gem.authors = ["Alexander Dreher"]
+  gem.authors = ["Alexander Dreher", "Marco Scholl"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'

@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Alexander Dreher"]
-  s.date = %q{2011-04-12}
+  s.authors = ["Alexander Dreher", "Marco Scholl"]
+  s.date = %q{2011-04-13}
   s.description = %q{Restricts requests to specific IP addresses and ranges for specified paths}
   s.email = %q{team@phatworx.de}
   s.extra_rdoc_files = [
