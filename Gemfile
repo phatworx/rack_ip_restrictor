@@ -1,5 +1,6 @@
 source "http://rubygems.org"
 gem "activesupport", ">= 2.3.5"
+gem "ipaddress"
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
