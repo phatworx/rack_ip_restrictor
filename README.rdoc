@@ -2,6 +2,8 @@
 
 Restricts requests to specific IP addresses and ranges for specified paths.
 
+http://travis-ci.org/phatworx/rack_ip_restrictor.png
+
 == Installation
 Add the following line to your Gemfile
   gem "rack_ip_restrictor"
