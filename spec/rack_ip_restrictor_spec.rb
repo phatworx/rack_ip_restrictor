@@ -52,7 +52,7 @@ describe Rack::IpRestrictor do
 
           restrict '/test'
           restrict /^\/test/
-          restrict ['/test', '/test2']
+          restrict '/test', '/test2'
         end
 
       end

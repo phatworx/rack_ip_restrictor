@@ -17,8 +17,7 @@ module Rack::IpRestrictor
     #   :only => [:test1, :admins]
     def initialize(*args)
       @options = args.extract_options!
-
-      raise Exception, "invalid argument" unless @options.has_key? :only and @options[:only].is_a? Symbol
+      raise Exception, "invalid argument" if @options.has_key? :only and not @options[:only].is_a? Symbol
 
       @paths = args
       @paths.each do |path|
